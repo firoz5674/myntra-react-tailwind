@@ -30,7 +30,7 @@ function Navbar() {
           {navMenu.map((menu) => {
             const { id, url, urlText } = menu;
             return (
-              <Link onMouseOver={openHandler} onMouseLeave={closeHandler} id={id} to={url} className="pr-8 font-bold uppercase text-[16px]">{urlText}</Link>
+              <Link onMouseOver={openHandler} id={id} to={url} className="pr-8 font-bold uppercase text-[16px]">{urlText}</Link>
             )
           })}
         </div>
@@ -52,7 +52,7 @@ function Navbar() {
         </div>
       </nav>
       {megaMenuOpen && (
-        <div className="bg-slate-300 p-4 w-[60%] relative left-40 z-10 flex justify-between">
+        <div className="bg-slate-300 p-4 w-[60%] relative left-40 z-10 flex justify-between" onMouseLeave={closeHandler}>
           <div className="w-[20%]">
             one
           </div>
